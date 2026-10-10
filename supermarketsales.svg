@@ -1,0 +1,223 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="700" viewBox="0 0 1600 700">
+  <defs>
+    <!-- Background Gradient (Dark Mode Theme based on Streamlit app screenshot) -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0B0F19;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#111827;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1F2937;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E293B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0F172A;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Accent Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38BDF8;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Soft Drop Shadow -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <style>
+      .title { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 800; fill: #FFFFFF; }
+      .subtitle { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 400; fill: #94A3B8; }
+      .label { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 600; fill: #94A3B8; }
+      .value { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 700; fill: #F8FAFC; }
+      .kpi-val { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 800; fill: #38BDF8; }
+      .kpi-val-green { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 800; fill: #34D399; }
+      .tech-pill { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 11px; fill: #38BDF8; letter-spacing: 1px; }
+      .axis-label { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 10px; fill: #64748B; }
+      .chart-line { fill: none; stroke: #38BDF8; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .chart-area { fill: url(#lineGrad); opacity: 0.2; }
+      .bar-primary { fill: #8B5CF6; }
+      .bar-accent { fill: #38BDF8; }
+      .donut-bg { stroke: #334155; stroke-width: 24; fill: none; }
+      .donut-1 { stroke: #8B5CF6; stroke-width: 24; fill: none; stroke-dasharray: 120 314; }
+      .donut-2 { stroke: #38BDF8; stroke-width: 24; fill: none; stroke-dasharray: 95 314; stroke-dashoffset: -120; }
+      .donut-3 { stroke: #34D399; stroke-width: 24; fill: none; stroke-dasharray: 99 314; stroke-dashoffset: -215; }
+    </style>
+
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#38BDF8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38BDF8;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="700" fill="url(#bgGrad)"/>
+  
+  <!-- Ambient Glow Background Circles -->
+  <circle cx="200" cy="150" r="250" fill="#8B5CF6" opacity="0.08" filter="blur(60px)"/>
+  <circle cx="1300" cy="550" r="300" fill="#38BDF8" opacity="0.08" filter="blur(80px)"/>
+
+  <!-- Left Side: Project Title & Branding -->
+  <g transform="translate(80, 110)">
+    <!-- Shopping Cart Icon container -->
+    <g transform="translate(0, 0)">
+      <rect width="52" height="52" rx="12" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+      <path transform="translate(14, 14) scale(1)" fill="#38BDF8" d="M17 18c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2z"/>
+    </g>
+
+    <text x="70" y="37" class="title" font-size="20" fill="#94A3B8" style="letter-spacing: 2px;">STREAMLIT APP</text>
+    
+    <text x="0" y="115" class="title" font-size="52">Supermarket Sales</text>
+    <text x="0" y="175" class="title" font-size="52">Analytics Dashboard</text>
+    
+    <text x="0" y="225" class="subtitle" font-size="20">Interactive Business Intelligence Dashboard for sales performance,</text>
+    <text x="0" y="255" class="subtitle" font-size="20">customer behavior, product analytics and operations.</text>
+
+    <!-- Tech Stack Pills -->
+    <g transform="translate(0, 295)">
+      <rect width="90" height="28" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="18" class="tech-pill">PYTHON</text>
+
+      <rect x="102" y="0" width="90" height="28" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <text x="120" y="18" class="tech-pill">PANDAS</text>
+
+      <rect x="204" y="0" width="80" height="28" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <text x="221" y="18" class="tech-pill">PLOTLY</text>
+
+      <rect x="296" y="0" width="105" height="28" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <text x="312" y="18" class="tech-pill">STREAMLIT</text>
+    </g>
+
+    <!-- Author Tag -->
+    <g transform="translate(0, 390)">
+      <line x1="0" y1="0" x2="450" y2="0" stroke="#334155" stroke-width="1"/>
+      <text x="0" y="35" class="label" font-size="16">Designed by <tspan fill="#38BDF8" font-weight="700">Sweti Yadav</tspan></text>
+      <text x="0" y="60" class="subtitle" font-size="13">B.Tech CSE – Artificial Intelligence &amp; Machine Learning</text>
+    </g>
+  </g>
+
+  <!-- Right Side: Dark Mode BI Dashboard Mockup -->
+  <g transform="translate(680, 45)" filter="url(#softShadow)">
+    <!-- Outer Window Frame -->
+    <rect width="840" height="610" rx="14" ry="14" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+    
+    <!-- Window Header Bar -->
+    <rect width="840" height="42" rx="14" ry="14" fill="#1E293B"/>
+    <rect y="21" width="840" height="21" fill="#1E293B"/>
+    <line x1="0" y1="42" x2="840" y2="42" stroke="#334155" stroke-width="1"/>
+    
+    <!-- Window Controls / Dots -->
+    <circle cx="24" cy="21" r="6" fill="#EF4444"/>
+    <circle cx="44" cy="21" r="6" fill="#F59E0B"/>
+    <circle cx="64" cy="21" r="6" fill="#10B981"/>
+    
+    <!-- Window Title -->
+    <text x="420" y="26" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="13" fill="#94A3B8">Supermarket Sales Dashboard — Streamlit</text>
+
+    <!-- Dashboard Inner Container -->
+    <g transform="translate(24, 66)">
+      
+      <!-- Section Indicator: Key Performance Indicators -->
+      <g transform="translate(0, 0)">
+        <rect width="14" height="14" rx="3" fill="#8B5CF6"/>
+        <text x="24" y="12" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="14" fill="#F8FAFC">Key Performance Indicators</text>
+      </g>
+
+      <!-- KPI Card 1: Total Sales -->
+      <g transform="translate(0, 30)">
+        <rect width="254" height="85" rx="8" fill="url(#cardGrad)" stroke="#334155" stroke-width="1"/>
+        <text x="16" y="26" class="label" font-size="11" letter-spacing="0.5">TOTAL SALES</text>
+        <text x="16" y="60" class="kpi-val" font-size="26">$322,966.75</text>
+        <text x="16" y="75" class="subtitle" font-size="10">Total revenue generated</text>
+      </g>
+
+      <!-- KPI Card 2: Gross Income -->
+      <g transform="translate(268, 30)">
+        <rect width="254" height="85" rx="8" fill="url(#cardGrad)" stroke="#334155" stroke-width="1"/>
+        <text x="16" y="26" class="label" font-size="11" letter-spacing="0.5">GROSS INCOME</text>
+        <text x="16" y="60" class="kpi-val-green" font-size="26">$15,379.37</text>
+        <text x="16" y="75" class="subtitle" font-size="10">Gross margin profit</text>
+      </g>
+
+      <!-- KPI Card 3: Transactions -->
+      <g transform="translate(536, 30)">
+        <rect width="254" height="85" rx="8" fill="url(#cardGrad)" stroke="#334155" stroke-width="1"/>
+        <text x="16" y="26" class="label" font-size="11" letter-spacing="0.5">TRANSACTIONS</text>
+        <text x="16" y="60" class="kpi-val" font-size="26" fill="#F472B6">1,000</text>
+        <text x="16" y="75" class="subtitle" font-size="10">Unique customer invoices</text>
+      </g>
+
+      <!-- Section Indicator: Sales Overview & Analytics Charts -->
+      <g transform="translate(0, 135)">
+        <rect width="14" height="14" rx="3" fill="#38BDF8"/>
+        <text x="24" y="12" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="14" fill="#F8FAFC">Sales Overview &amp; Product Performance</text>
+      </g>
+
+      <!-- Chart Card 1: Monthly Sales Trend Line Chart -->
+      <g transform="translate(0, 165)">
+        <rect width="508" height="260" rx="8" fill="url(#cardGrad)" stroke="#334155" stroke-width="1"/>
+        <text x="20" y="30" class="value" font-size="15">Monthly Revenue Trend</text>
+        <text x="20" y="46" class="subtitle" font-size="11">Performance across branches (Jan - Jun)</text>
+
+        <!-- Chart Gridlines -->
+        <line x1="20" y1="85" x2="488" y2="85" stroke="#334155" stroke-width="0.7" stroke-dasharray="3 3"/>
+        <line x1="20" y1="130" x2="488" y2="130" stroke="#334155" stroke-width="0.7" stroke-dasharray="3 3"/>
+        <line x1="20" y1="175" x2="488" y2="175" stroke="#334155" stroke-width="0.7" stroke-dasharray="3 3"/>
+
+        <!-- Area Fill under line -->
+        <polygon class="chart-area" points="50,175 120,140 190,155 260,110 330,125 400,85 470,95 470,205 50,205"/>
+
+        <!-- Smooth Trend Line -->
+        <polyline class="chart-line" points="50,175 120,140 190,155 260,110 330,125 400,85 470,95"/>
+
+        <!-- Data Points -->
+        <circle cx="50" cy="175" r="4.5" fill="#38BDF8"/>
+        <circle cx="120" cy="140" r="4.5" fill="#38BDF8"/>
+        <circle cx="190" cy="155" r="4.5" fill="#38BDF8"/>
+        <circle cx="260" cy="110" r="4.5" fill="#38BDF8"/>
+        <circle cx="330" cy="125" r="4.5" fill="#38BDF8"/>
+        <circle cx="400" cy="85" r="4.5" fill="#38BDF8"/>
+        <circle cx="470" cy="95" r="4.5" fill="#38BDF8"/>
+
+        <!-- X-Axis Labels -->
+        <g class="axis-label" transform="translate(0, 222)">
+          <text x="50" y="15" text-anchor="middle">Jan</text>
+          <text x="120" y="15" text-anchor="middle">Feb</text>
+          <text x="190" y="15" text-anchor="middle">Mar</text>
+          <text x="260" y="15" text-anchor="middle">Apr</text>
+          <text x="330" y="15" text-anchor="middle">May</text>
+          <text x="400" y="15" text-anchor="middle">Jun</text>
+          <text x="470" y="15" text-anchor="middle">Jul</text>
+        </g>
+      </g>
+
+      <!-- Chart Card 2: Category Breakdown Donut Chart -->
+      <g transform="translate(524, 165)">
+        <rect width="266" height="260" rx="8" fill="url(#cardGrad)" stroke="#334155" stroke-width="1"/>
+        <text x="20" y="30" class="value" font-size="15">Top Categories</text>
+        <text x="20" y="46" class="subtitle" font-size="11">Sales by product line</text>
+
+        <!-- Donut Graphic -->
+        <g transform="translate(133, 135)">
+          <circle cx="0" cy="0" r="50" class="donut-bg"/>
+          <circle cx="0" cy="0" r="50" class="donut-1"/>
+          <circle cx="0" cy="0" r="50" class="donut-2"/>
+          <circle cx="0" cy="0" r="50" class="donut-3"/>
+          <text x="0" y="5" text-anchor="middle" font-family="'Segoe UI', Roboto" font-weight="700" font-size="16" fill="#F8FAFC">100%</text>
+        </g>
+
+        <!-- Legend -->
+        <g transform="translate(20, 202)">
+          <circle cx="6" cy="6" r="4" fill="#8B5CF6"/>
+          <text x="18" y="10" class="axis-label" font-size="11" fill="#94A3B8">Food &amp; beverages (38%)</text>
+          
+          <circle cx="130" cy="6" r="4" fill="#38BDF8"/>
+          <text x="142" y="10" class="axis-label" font-size="11" fill="#94A3B8">Fashion (30%)</text>
+
+          <circle cx="6" cy="26" r="4" fill="#34D399"/>
+          <text x="18" y="30" class="axis-label" font-size="11" fill="#94A3B8">Electronics (32%)</text>
+        </g>
+      </g>
+
+    </g>
+  </g>
+</svg>
