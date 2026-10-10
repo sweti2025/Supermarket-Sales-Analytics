@@ -10,6 +10,8 @@ The project follows an end-to-end data analytics workflow:
 
 **Raw Data → Data Cleaning → Exploratory Data Analysis → Feature Engineering → SQL Analysis → Interactive Dashboard → Business Insights**
 
+![Project Overview](supermarketsales.svg)
+
 ## 🚀 Dashboard Features
 
 - 📊 Interactive KPI dashboard
